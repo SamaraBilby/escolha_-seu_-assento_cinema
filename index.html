@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="./assets/style.css">
     <script src="./script/script.js" defer></script>
 
-    <title>RoseBud - Escolha seu Assento</title>
+    <title>CondadoCine - Escolha seu Assento</title>
 
 </head>
 <body>
 
     <div class="movie-container">
         <label>Escolha um filme</label>
-        <option value="10">O Senhor dos Anéis: A Sociedade do Anel (R$ 10,00)</option>
-        <option value="12">O Senhor dos Anéis: As Duas Torres (R$ 12,00)</option>
-        <option value="8">O Senhor dos Anéis: O Retorno do Rei (R$ 8,00)</option>
-        <option value="9"> Hobbit: Uma Jornada Inesperada (R$ 9,00)</option>
+        <select id="movie">
+            <option value="10">O Senhor dos Anéis: A Sociedade do Anel (R$ 10,00)</option>
+            <option value="12">O Senhor dos Anéis: As Duas Torres (R$ 12,00)</option>
+            <option value="8">O Senhor dos Anéis: O Retorno do Rei (R$ 8,00)</option>
+            <option value="9"> Hobbit: Uma Jornada Inesperada (R$ 9,00)</option>
+        </select>
     </div>
     <ul class="subtitle_seat">
         <li>
@@ -34,6 +36,82 @@
                 <small>Ocupada</small>   
         </li>
     </ul>
+
+    <div class="container">
+        <div class="screen"></div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+    </div>
+
+    <p class="text"> Você selecionou 
+        <span id="count">0</span> 
+        assentos. Valor Total 
+        <span id="total">0</span>
+    </p>
     
 </body>
 </html>
