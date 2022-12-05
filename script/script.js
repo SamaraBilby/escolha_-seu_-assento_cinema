@@ -8,6 +8,14 @@ let ticketPrice = +movieSelect.value;
 
 console.log(ticketPrice)
 
+// salvar a esolha do filme e o preço - localStore
+
+function setMovieData(movieIndex, moviePrice) {
+    
+    localStorage.setItem('selectedMovieIndex', movieIndex);
+    localStorage.setItem('selectedMoviePrice', moviePrice);
+}
+
 //função para atualização do Valor total e conta
 
 function updateSelectCount(){
@@ -15,9 +23,23 @@ function updateSelectCount(){
 
     //console.log(selectedSeats);
 
-    const selectedSeatsCount = selectedSeats.length;
+     //cópia do assento selecionado dentro do arr
+    // map array
+    // retornar um novo array indexes
+    //localStorage
 
-    //console.log(selectedSeatsCount)
+    const seatsIndex = [...selectedSeats].map(function(seat) {
+            return [...seats].indexOf(seat)
+    });
+
+    console.log(seatsIndex);
+
+    localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
+
+
+
+    const selectedSeatsCount = selectedSeats.length;
+    //console.log(selectedSeatsCount);
 
     count.innerText = selectedSeatsCount;
 
@@ -29,7 +51,10 @@ function updateSelectCount(){
 movieSelect.addEventListener('change', (e) => {
     ticketPrice = +e.target.value;
 
+    setMovieData(e.target.selectedIndex, e.target.value);
+
     updateSelectCount();
+
 });
 
 // Selecionando assento
@@ -40,4 +65,5 @@ container.addEventListener('click', (e) => {
 
         updateSelectCount();
     }
+    
 });
