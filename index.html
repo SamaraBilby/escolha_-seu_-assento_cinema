@@ -14,13 +14,42 @@
 <body>
 
     <div class="movie-container">
-        <label>Escolha um filme</label>
-        <select id="movie">
+
+        <img class="logo" src="./assets/img/logo.png" alt="Cine Condado">
+        
+        <h3 class="escolhaFilme">Escolha o filme</h3>
+        <fieldset id="movie">
+            <label for="1">
+                <input type="radio"  name="filme" id="1" value="10">
+                <img src="./assets/img/senhor_aneis_1.jpg" alt="Masculino">
+                <p> A Sociedade do Anel</p>
+                <p>R$ 10,00</p>
+            </label>
+            <label for="2">
+                <input type="radio" name="filme"  id="2" value="12">
+                <img src="./assets/img/senhor_aneis_2.jpg" alt="Feminino">
+                <p>As Duas Torres</p>
+                <p>R$ 12,00</p>
+            </label>
+
+            <label for="3">
+                <input type="radio" name="filme" id="3"  value="8">
+                <img src="./assets/img/senhor_aneis_3.jpg" alt="Feminino">
+                <p>O Retorno do Rei</p>
+                <p>R$ 8,00</p>
+            </label>
+
+
+        </fieldset>
+
+        <!--label>Escolha um filme</!--label>
+        <select-- id="movie">
             <option value="10">O Senhor dos Anéis: A Sociedade do Anel (R$ 10,00)</option>
             <option value="12">O Senhor dos Anéis: As Duas Torres (R$ 12,00)</option>
             <option value="8">O Senhor dos Anéis: O Retorno do Rei (R$ 8,00)</option>
             <option value="9"> Hobbit: Uma Jornada Inesperada (R$ 9,00)</option>
-        </select>
+        </select-->
+
     </div>
     <ul class="subtitle_seat">
         <li>
